@@ -2,6 +2,7 @@
 import DesignSystemSection from "@/components/design-system/DesignSystemSection.vue";
 import DesignSytemColors from "@/components/design-system/DesignSytemColors.vue";
 import DesignSytemTypography from "@/components/design-system/DesignSytemTypography.vue";
+import DesignSystemInteractiveElements from "@/components/design-system/DesignSystemInteractiveElements.vue";
 </script>
 
 <template>
@@ -12,6 +13,10 @@ import DesignSytemTypography from "@/components/design-system/DesignSytemTypogra
 
 		<DesignSystemSection title="Typography">
 			<DesignSytemTypography />
+		</DesignSystemSection>
+
+		<DesignSystemSection title="Interactive Elements">
+			<DesignSystemInteractiveElements />
 		</DesignSystemSection>
 	</main>
 </template>

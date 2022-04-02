@@ -4,10 +4,15 @@ import { RouterView } from "vue-router";
 
 <template>
 	<header>test</header>
-
-	<RouterView />
+	<main class="app__main">
+		<RouterView />
+	</main>
 </template>
 
 <style lang="scss">
 @use "@/assets/styles.scss";
+
+.app__main {
+	padding-block: 12rem;
+}
 </style>

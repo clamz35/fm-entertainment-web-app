@@ -1,5 +1,6 @@
 :root {
 	/** Colors */
+	--primary-color-200: rgba(var(--primary-color-400), 0.5);
 	--primary-color-400: #ffffff;
 
 	--secondary-color-200: #5a698f;
@@ -11,6 +12,9 @@
 	--primary-color: var(--primary-color-400);
 	--secondary-color: var(--secondary-color-400);
 	--accent-color: var(--accent-color-400);
+
+	--secondary-color-contrast: #ffffff;
+	--accent-color-contrast: #ffffff;
 
 	/* Font sizes */
 	--fs-300: 1.3rem;
