@@ -1,0 +1,24 @@
+:root {
+	/** Colors */
+	--primary-color-400: #ffffff;
+
+	--secondary-color-200: #5a698f;
+	--secondary-color-300: #161d2f;
+	--secondary-color-400: #10141e;
+
+	--accent-color-400: #fc4747;
+
+	--primary-color: var(--primary-color-400);
+	--secondary-color: var(--secondary-color-400);
+	--accent-color: var(--accent-color-400);
+
+	/* Font sizes */
+	--fs-300: 1.3rem;
+	--fs-400: 1.5rem;
+	--fs-500: 1.8rem;
+	--fs-600: 2.4rem;
+	--fs-700: 2.75rem;
+	--fs-800: 3.2rem;
+
+	--ff-1: "Outfit", sans-serif;
+}

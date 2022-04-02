@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap");
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: var(--fs-400);
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	font-family: var(--ff-1);
+	font-weight: 300;
+}
+
+a {
+	color: var(--accent-color);
+}
+
+h1 {
+	font-size: var(--fs-700);
+	font-weight: 300;
+}
+
+h2 {
+	font-size: var(--fs-600);
+	font-weight: 300;
+}
+
+h3 {
+	font-size: var(--fs-600);
+	font-weight: 500;
+}
+
+h4 {
+	font-size: var(--fs-500);
+	font-weight: 500;
+}
+
+p.text--s {
+	font-size: var(--fs-300);
+	font-weight: 300;
+}
