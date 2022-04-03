@@ -4,13 +4,21 @@
 
 		<input type="text" placeholder="Email adresss" />
 
-		<button>Login to your account</button>
+		<button class="btn">Login to your account</button>
 
-		<Thumbnail
-			:src="'/src/assets/images/thumbnails/112/regular/large.jpg'"
-			title="Movie title"
-			subtitle="Movie subtitle"
-		/>
+		<div class="design-system-interactive-elements__thumbnails">
+			<Thumbnail
+				:src="'/src/assets/images/thumbnails/112/regular/large.jpg'"
+				title="Movie title"
+				subtitle="Movie subtitle"
+			/>
+			<Thumbnail
+				:src="'/src/assets/images/thumbnails/112/regular/large.jpg'"
+				:active="true"
+				title="Movie title"
+				subtitle="Movie subtitle"
+			/>
+		</div>
 	</div>
 </template>
 
@@ -25,5 +33,9 @@ import Thumbnail from "@/components/Thumbnail.vue";
 	flex-direction: column;
 	gap: 5rem;
 	max-width: 50rem;
+	&__thumbnails {
+		display: flex;
+		gap: 3rem;
+	}
 }
 </style>

@@ -17,6 +17,7 @@
 
 	align-items: flex-start;
 	gap: 2.4rem;
+	margin-bottom: 1.7rem;
 	&__input {
 		padding-inline: none;
 	}
