@@ -11,6 +11,9 @@
 import { RouterView } from "vue-router";
 
 import HeaderLayout from "@/layout/HeaderLayout.vue";
+import { useMovieStore } from "./stores/movie.store";
+
+useMovieStore().loadMovies();
 </script>
 
 <style lang="scss">

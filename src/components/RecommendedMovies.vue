@@ -15,11 +15,10 @@
 </template>
 
 <script setup lang="ts">
-import { getRecommanded } from "@/helpers/movies.helper";
-import { ref } from "vue";
+import { useMovieStore } from "@/stores/movie.store";
 import Thumbnail from "./Thumbnail.vue";
 
-const recommendedMovies = ref(getRecommanded());
+const { recommendedMovies } = useMovieStore();
 </script>
 
 <style scoped lang="scss">
