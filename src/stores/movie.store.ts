@@ -1,4 +1,10 @@
-import { getRecommended, getTrendings } from "@/helpers/movies.helper";
+import {
+	getBookmarked,
+	getMovies,
+	getRecommended,
+	getSeries,
+	getTrendings,
+} from "@/helpers/movies.helper";
 import type { IMovie } from "@/models/Movie.model";
 import { defineStore } from "pinia";
 import data from "../data.json";
@@ -25,6 +31,18 @@ export const useMovieStore = defineStore("movieStore", {
 
 		recommendedMovies: (state: MovieState): IMovie[] => {
 			return getRecommended(state.movies);
+		},
+
+		getMovies(state: MovieState): IMovie[] {
+			return getMovies(state.movies);
+		},
+
+		series(state: MovieState): IMovie[] {
+			return getSeries(state.movies);
+		},
+
+		bookmarkedMovies: (state: MovieState): IMovie[] => {
+			return getBookmarked(state.movies);
 		},
 
 		allMovies: (state: MovieState): IMovie[] => {

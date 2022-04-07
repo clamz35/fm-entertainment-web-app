@@ -7,17 +7,17 @@
 				</router-link>
 			</li>
 			<li>
-				<router-link :to="{ name: 'home' }" aria-label="Movies">
+				<router-link :to="{ name: 'movies' }" aria-label="Movies">
 					<MenuIcon src="icon-nav-movies.svg" />
 				</router-link>
 			</li>
 			<li>
-				<router-link :to="{ name: 'home' }" aria-label="Series">
+				<router-link :to="{ name: 'series' }" aria-label="Series">
 					<MenuIcon src="icon-nav-tv-series.svg" />
 				</router-link>
 			</li>
 			<li>
-				<router-link :to="{ name: 'home' }" aria-label="Bookmarks">
+				<router-link :to="{ name: 'bookmarked-movies' }" aria-label="Bookmarks">
 					<MenuIcon src="icon-nav-bookmark.svg" />
 				</router-link>
 			</li>

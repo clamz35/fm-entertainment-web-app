@@ -1,9 +1,9 @@
 <template>
-	<h2 class="h1">Recommended for you</h2>
+	<h2 class="h1">{{ title ?? "Movies" }}</h2>
 	<div class="recommended-movies">
 		<Thumbnail
 			class="recommended-movies__thumbnail"
-			v-for="movie in recommendedMovies"
+			v-for="movie in movies"
 			:key="movie.title"
 			:title="movie.title"
 			:subtitle="`${movie.year} - ${movie.category}`"
@@ -15,10 +15,15 @@
 </template>
 
 <script setup lang="ts">
-import { useMovieStore } from "@/stores/movie.store";
+import type { IMovie } from "@/models/Movie.model";
 import Thumbnail from "./Thumbnail.vue";
 
-const { recommendedMovies } = useMovieStore();
+interface MoviesProps {
+	movies: IMovie[];
+	title?: string;
+}
+
+defineProps<MoviesProps>();
 </script>
 
 <style scoped lang="scss">
