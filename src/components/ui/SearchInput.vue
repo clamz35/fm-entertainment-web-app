@@ -5,11 +5,17 @@
 			class="search-input__input h2"
 			type="text"
 			placeholder="Search for movies or TV series"
+			:value="filter"
+			@input="store.setFilter(($event.target as any).value)"
 		/>
 	</div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useMediaStore } from "@/stores/media.store";
+const store = useMediaStore();
+const { filter } = store;
+</script>
 
 <style scoped lang="scss">
 .search-input {

@@ -3,7 +3,7 @@
 		<SearchInput />
 
 		<section>
-			<Movies :movies="bookmarkedMovies" title="Bookmarked Movies" />
+			<Movies :movies="store.bookmarkedMovies" :title="title" />
 		</section>
 	</div>
 </template>
@@ -11,9 +11,15 @@
 <script setup lang="ts">
 import SearchInput from "@/components/ui/SearchInput.vue";
 import Movies from "../components/Movies.vue";
-import { useMovieStore } from "@/stores/movie.store";
+import { useMediaStore } from "@/stores/media.store";
+import { useMediaTitle } from "@/composables/useMediaTitle";
 
-const { bookmarkedMovies } = useMovieStore();
+const store = useMediaStore();
+
+const { title } = useMediaTitle(
+	"Bookmarked Movies",
+	() => store.bookmarkedMovies
+);
 </script>
 
 <style scoped lang="scss"></style>

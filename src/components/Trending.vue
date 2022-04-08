@@ -3,7 +3,7 @@
 	<div class="trending">
 		<Thumbnail
 			class="trending__thumbnail"
-			v-for="movie in trendings"
+			v-for="movie in store.trendings"
 			:key="movie.title"
 			:title="movie.title"
 			:subtitle="`${movie.year} - ${movie.category}`"
@@ -16,9 +16,9 @@
 
 <script setup lang="ts">
 import Thumbnail from "./Thumbnail.vue";
-import { useMovieStore } from "@/stores/movie.store";
+import { useMediaStore } from "@/stores/media.store";
 
-const { trendings } = useMovieStore();
+const store = useMediaStore();
 </script>
 
 <style scoped lang="scss">

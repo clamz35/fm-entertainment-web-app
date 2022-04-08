@@ -2,13 +2,20 @@
 	<div>
 		<SearchInput />
 
-		<section class="home__section home__trending">
-			<Trending />
-		</section>
+		<div v-if="!store.filter">
+			<section class="home__section home__trending">
+				<Trending />
+			</section>
+			<section class="home__section home__recommended-movies">
+				<Movies :movies="store.recommendedMovies" title="Recommended Movies" />
+			</section>
+		</div>
 
-		<section class="home__section home__recommended-movies">
-			<Movies :movies="recommendedMovies" title="Recommended Movies" />
-		</section>
+		<div v-if="store.filter">
+			<section>
+				<Movies :movies="store.mediasFiltered" :title="title" />
+			</section>
+		</div>
 	</div>
 </template>
 
@@ -16,9 +23,12 @@
 import SearchInput from "@/components/ui/SearchInput.vue";
 import Trending from "../components/Trending.vue";
 import Movies from "../components/Movies.vue";
-import { useMovieStore } from "@/stores/movie.store";
+import { useMediaStore } from "@/stores/media.store";
+import { useMediaTitle } from "@/composables/useMediaTitle";
 
-const { recommendedMovies } = useMovieStore();
+const store = useMediaStore();
+
+const { title } = useMediaTitle("Movies", () => store.mediasFiltered);
 </script>
 
 <style scoped lang="scss">

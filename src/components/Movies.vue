@@ -15,11 +15,11 @@
 </template>
 
 <script setup lang="ts">
-import type { IMovie } from "@/models/Movie.model";
+import type { IMedia } from "@/models/Media.model";
 import Thumbnail from "./Thumbnail.vue";
 
 interface MoviesProps {
-	movies: IMovie[];
+	movies: IMedia[];
 	title?: string;
 }
 
