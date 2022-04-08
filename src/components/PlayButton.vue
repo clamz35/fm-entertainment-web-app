@@ -2,7 +2,7 @@
 	<button class="play-button h4">
 		<img
 			class="play-button__icon"
-			src="@/assets/images/icon-play.svg"
+			src="/images/icon-play.svg"
 			alt="Play icon"
 		/>
 		Play
