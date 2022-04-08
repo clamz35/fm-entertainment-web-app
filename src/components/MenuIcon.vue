@@ -1,9 +1,11 @@
 <template>
-	<img :src="`src/assets/images/${src}`" :alt="alt" />
+	<img :src="imageSrc" :alt="alt" />
 </template>
 
 <script setup lang="ts">
-defineProps({
+import { computed } from "vue";
+
+const props = defineProps({
 	src: {
 		type: String,
 		default: "",
@@ -13,6 +15,10 @@ defineProps({
 		default: "",
 	},
 });
+
+const imageSrc = computed(
+	() => new URL(`/src/assets/images/${props.src}`, import.meta.url).href
+);
 </script>
 
 <style scoped lang="scss">
