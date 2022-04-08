@@ -40,6 +40,13 @@ import MenuIcon from "@/components/MenuIcon.vue";
 		padding: 0;
 	}
 }
+@media (max-width: 768px) {
+	.header-nav {
+		&__menu {
+			flex-direction: row;
+		}
+	}
+}
 </style>
 
 <style lang="scss">

@@ -31,5 +31,22 @@ defineProps<MoviesProps>();
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 4rem;
+	margin-right: 3.6rem;
+}
+
+@media (max-width: 768px) {
+	.recommended-movies {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2.9rem;
+		margin-right: 2.4rem;
+	}
+}
+
+@media (max-width: 520px) {
+	.recommended-movies {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		margin-right: 1.6rem;
+	}
 }
 </style>

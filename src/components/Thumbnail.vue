@@ -24,7 +24,7 @@
 
 		<div class="thumbnail__titles thumbnail-titles" v-if="!isTrending">
 			<p class="text--s thumbnail-titles__subtitle">{{ subtitle }}</p>
-			<h3 class="thumbnail-titles__title">{{ title }}</h3>
+			<h3 class="h4 thumbnail-titles__title">{{ title }}</h3>
 		</div>
 	</div>
 </template>

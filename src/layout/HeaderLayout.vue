@@ -17,6 +17,7 @@ import HeaderNav from "@/layout/HeaderNav.vue";
 	top: 3.2rem;
 	bottom: 3.2rem;
 	left: 3.2rem;
+	z-index: 1000;
 
 	display: flex;
 	flex-direction: column;
@@ -33,13 +34,32 @@ import HeaderNav from "@/layout/HeaderNav.vue";
 		align-items: center;
 	}
 	&__logo {
-		flex: 0;
 		margin-bottom: 7.5rem;
 	}
 
 	&__nav {
 		flex: 1;
 		color: #5a698f;
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+		top: 0;
+		width: unset;
+		bottom: unset;
+		right: 0;
+		left: 0;
+
+		flex-direction: row;
+		height: 5.6rem;
+		padding-block: 0;
+		padding-inline: 3.2rem;
+		border-radius: 0;
+		&__logo {
+			margin-bottom: unset;
+			margin-right: 7.5rem;
+		}
 	}
 }
 </style>

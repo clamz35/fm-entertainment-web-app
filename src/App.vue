@@ -29,4 +29,15 @@ useMediaStore().loadMovies();
 		padding-block: 3.2rem;
 	}
 }
+
+@media (max-width: 768px) {
+	.app {
+		grid-template-columns: 1fr;
+		grid-template-rows: 5.6rem 1fr;
+		padding-block: 0;
+		&__main {
+			padding-block: 3.2rem;
+		}
+	}
+}
 </style>
