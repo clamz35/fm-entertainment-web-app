@@ -6,7 +6,7 @@
 			v-for="movie in store.trendings"
 			:key="movie.title"
 			:title="movie.title"
-			:subtitle="`${movie.year} - ${movie.category}`"
+			:subtitle="`${movie.year} • ${movie.category} • ${movie.rating}`"
 			:src="movie.thumbnail.trending?.large"
 			:bookmarked="movie.isBookmarked"
 			:is-trending="true"
