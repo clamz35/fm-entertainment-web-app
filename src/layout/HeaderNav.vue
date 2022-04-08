@@ -9,10 +9,6 @@
 			<li>
 				<router-link :to="{ name: 'movies' }" aria-label="Movies">
 					<MenuIcon src="icon-nav-movies.svg" />
-					<img
-						src="@/assets/images/icon-nav-home.svg"
-						alt="Entertainment web app logo"
-					/>
 				</router-link>
 			</li>
 			<li>

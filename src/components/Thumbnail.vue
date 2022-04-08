@@ -110,12 +110,12 @@ defineProps({
 
 			#{$cardRef}--bookmarked & {
 				&::after {
-					background-image: url("@/assets/images/icon-bookmark-full.svg");
+					background-image: url("/images/icon-bookmark-full.svg");
 				}
 			}
 			&::after {
 				content: "";
-				background-image: url("@/assets/images/icon-bookmark-empty.svg");
+				background-image: url("/images/icon-bookmark-empty.svg");
 				width: 12px;
 				height: 14px;
 				transition: filter 0.5s ease-in-out;

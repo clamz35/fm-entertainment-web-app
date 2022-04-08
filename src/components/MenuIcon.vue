@@ -1,5 +1,5 @@
 <template>
-	<img :src="imageSrc" :alt="alt" />
+	<img :src="`/images/${props.src}`" :alt="alt" />
 </template>
 
 <script setup lang="ts">
@@ -15,10 +15,6 @@ const props = defineProps({
 		default: "",
 	},
 });
-
-const imageSrc = computed(
-	() => new URL(`/src/assets/images/${props.src}`, import.meta.url).href
-);
 </script>
 
 <style scoped lang="scss">
