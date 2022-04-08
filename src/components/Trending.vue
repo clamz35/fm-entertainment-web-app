@@ -1,6 +1,6 @@
 <template>
 	<h2 class="h1">Trending</h2>
-	<div class="trending" ref="trendingElt" @wheel.up.prevent="wheel">
+	<div class="trending" ref="trendingElt" @wheel.prevent="wheel">
 		<Thumbnail
 			class="trending__thumbnail"
 			v-for="movie in store.trendings"
@@ -20,12 +20,11 @@ import { useMediaStore } from "@/stores/media.store";
 import { ref } from "vue";
 
 const store = useMediaStore();
-const trendingElt: any = ref(null);
-console.log(trendingElt);
-const wheel = (z) => {
-	console.log("wheel", z);
+const trendingElt = ref<HTMLElement | null>(null);
+
+const wheel = (wheelEvent: WheelEvent) => {
 	if (trendingElt.value) {
-		trendingElt.value.scrollLeft = trendingElt.value?.scrollLeft + z.deltaY;
+		trendingElt.value.scrollLeft += wheelEvent.deltaY;
 	}
 };
 </script>
