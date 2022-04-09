@@ -67,11 +67,14 @@ import HeaderNav from "@/layout/HeaderNav.vue";
 		border-radius: 0;
 		&__logo {
 			margin-bottom: unset;
-			margin-right: 7.5rem;
 		}
 
 		&__avatar {
 			width: 3.2rem;
+		}
+
+		&__nav {
+			flex: unset;
 		}
 	}
 }

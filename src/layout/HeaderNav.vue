@@ -31,10 +31,12 @@ import MenuIcon from "@/components/MenuIcon.vue";
 
 <style scoped lang="scss">
 .header-nav {
+	--nav--gap: 4rem;
+	--nav-direction: column;
 	&__menu {
 		display: flex;
-		flex-direction: column;
-		gap: 4rem;
+		flex-direction: var(--nav-direction);
+		gap: var(--nav--gap);
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
@@ -42,17 +44,13 @@ import MenuIcon from "@/components/MenuIcon.vue";
 }
 @media (max-width: 768px) {
 	.header-nav {
-		&__menu {
-			flex-direction: row;
-		}
+		--nav-direction: row;
 	}
 }
-</style>
 
-<style lang="scss">
-.header-nav__menu {
-	.router-link-active img {
-		filter: brightness(0) invert(1);
+@media (max-width: 520px) {
+	.header-nav {
+		--nav--gap: 2.4rem;
 	}
 }
 </style>

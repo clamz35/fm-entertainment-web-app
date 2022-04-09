@@ -21,12 +21,13 @@ useMediaStore().loadMovies();
 
 .app {
 	display: grid;
-	grid-template-columns: 16.4rem 1fr;
+	grid-template-columns: 12.8rem 1fr;
 	grid-template-rows: 1fr;
 	padding-block: 3.2rem;
 	&__main {
 		height: 100%;
 		padding-block: 3.2rem;
+		padding-left: 3.6rem;
 	}
 }
 
@@ -37,6 +38,15 @@ useMediaStore().loadMovies();
 		padding-block: 0;
 		&__main {
 			padding-block: 3.2rem;
+			padding-left: 2.5rem;
+		}
+	}
+}
+
+@media (max-width: 520px) {
+	.app {
+		&__main {
+			padding-left: 1.6rem;
 		}
 	}
 }
