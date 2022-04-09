@@ -3,27 +3,31 @@
 	<div class="recommended-movies">
 		<Thumbnail
 			class="recommended-movies__thumbnail"
-			v-for="movie in movies"
-			:key="movie.title"
-			:title="movie.title"
-			:subtitle="`${movie.year} • ${movie.category} • ${movie.rating}`"
-			:src="movie.thumbnail.regular.large"
-			:bookmarked="movie.isBookmarked"
+			v-for="media in medias"
+			:key="media.title"
+			:title="media.title"
+			:src="media.thumbnail.regular.large"
+			:bookmarked="media.isBookmarked"
 			:is-trending="false"
-		/>
+		>
+			<template v-slot:subtitle>
+				<MediaSubtitle :media="media" />
+			</template>
+		</Thumbnail>
 	</div>
 </template>
 
 <script setup lang="ts">
 import type { IMedia } from "@/models/Media.model";
 import Thumbnail from "./Thumbnail.vue";
+import MediaSubtitle from "./MediaSubtitle.vue";
 
-interface MoviesProps {
-	movies: IMedia[];
+interface MediasProps {
+	medias: IMedia[];
 	title?: string;
 }
 
-defineProps<MoviesProps>();
+defineProps<MediasProps>();
 </script>
 
 <style scoped lang="scss">

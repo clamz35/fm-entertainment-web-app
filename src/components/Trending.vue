@@ -3,14 +3,17 @@
 	<div class="trending" ref="trendingElt" @wheel.prevent="wheel">
 		<Thumbnail
 			class="trending__thumbnail"
-			v-for="movie in store.trendings"
-			:key="movie.title"
-			:title="movie.title"
-			:subtitle="`${movie.year} • ${movie.category} • ${movie.rating}`"
-			:src="movie.thumbnail.trending?.large"
-			:bookmarked="movie.isBookmarked"
+			v-for="media in store.trendings"
+			:key="media.title"
+			:title="media.title"
+			:src="media.thumbnail.trending?.large"
+			:bookmarked="media.isBookmarked"
 			:is-trending="true"
-		/>
+		>
+			<template v-slot:subtitle>
+				<MediaSubtitle :media="media" />
+			</template>
+		</Thumbnail>
 	</div>
 </template>
 
@@ -18,6 +21,7 @@
 import Thumbnail from "./Thumbnail.vue";
 import { useMediaStore } from "@/stores/media.store";
 import { ref } from "vue";
+import MediaSubtitle from "./MediaSubtitle.vue";
 
 const store = useMediaStore();
 const trendingElt = ref<HTMLElement | null>(null);

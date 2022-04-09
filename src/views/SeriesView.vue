@@ -3,14 +3,14 @@
 		<SearchInput />
 
 		<section>
-			<Movies :movies="store.series" :title="title" />
+			<Medias :medias="store.series" :title="title" />
 		</section>
 	</div>
 </template>
 
 <script setup lang="ts">
 import SearchInput from "@/components/ui/SearchInput.vue";
-import Movies from "../components/Movies.vue";
+import Medias from "../components/Medias.vue";
 import { useMediaStore } from "@/stores/media.store";
 import { useMediaTitle } from "@/composables/useMediaTitle";
 
