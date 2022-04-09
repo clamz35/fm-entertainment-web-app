@@ -65,6 +65,7 @@ defineProps({
 	display: flex;
 	flex-direction: column;
 	gap: 0.6rem;
+	cursor: pointer;
 	&__card {
 		position: relative;
 
@@ -93,6 +94,7 @@ defineProps({
 
 		&__img {
 			width: 100%;
+			transition: transform 0.3s ease-in-out;
 		}
 		&__bookmark {
 			position: absolute;
@@ -151,6 +153,9 @@ defineProps({
 		}
 
 		&:hover {
+			#{$cardRef}__img {
+				transform: scale(1.2);
+			}
 			#{$cardRef}__play-btn {
 				background-color: rgba(0, 0, 0, 0.5);
 				opacity: 1;
