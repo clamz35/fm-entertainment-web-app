@@ -4,6 +4,11 @@
 			<img src="/images/logo.svg" alt="Entertainment web app logo" />
 		</router-link>
 		<HeaderNav class="header__nav" />
+		<img
+			class="header__avatar"
+			src="/images/image-avatar.png"
+			alt="User avatar"
+		/>
 	</div>
 </template>
 
@@ -41,6 +46,10 @@ import HeaderNav from "@/layout/HeaderNav.vue";
 		flex: 1;
 		color: #5a698f;
 	}
+
+	&__avatar {
+		width: 4rem;
+	}
 }
 
 @media (max-width: 768px) {
@@ -59,6 +68,18 @@ import HeaderNav from "@/layout/HeaderNav.vue";
 		&__logo {
 			margin-bottom: unset;
 			margin-right: 7.5rem;
+		}
+
+		&__avatar {
+			width: 3.2rem;
+		}
+	}
+}
+
+@media (max-width: 520px) {
+	.header {
+		&__avatar {
+			width: 2.4rem;
 		}
 	}
 }
