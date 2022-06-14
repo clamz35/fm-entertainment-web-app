@@ -2,23 +2,39 @@
 	<nav class="header-nav">
 		<ul class="header-nav__menu">
 			<li>
-				<router-link :to="{ name: 'home' }" aria-label="Home">
-					<MenuIcon src="icon-nav-home.svg" />
+				<router-link
+					:to="{ name: 'home' }"
+					v-slot="{ isActive }"
+					aria-label="Home"
+				>
+					<MenuIcon src="icon-nav-home.svg" :isActive="isActive" />
 				</router-link>
 			</li>
 			<li>
-				<router-link :to="{ name: 'movies' }" aria-label="Movies">
-					<MenuIcon src="icon-nav-movies.svg" />
+				<router-link
+					:to="{ name: 'movies' }"
+					v-slot="{ isActive }"
+					aria-label="Movies"
+				>
+					<MenuIcon src="icon-nav-movies.svg" :isActive="isActive" />
 				</router-link>
 			</li>
 			<li>
-				<router-link :to="{ name: 'series' }" aria-label="Series">
-					<MenuIcon src="icon-nav-tv-series.svg" />
+				<router-link
+					:to="{ name: 'series' }"
+					v-slot="{ isActive }"
+					aria-label="Series"
+				>
+					<MenuIcon src="icon-nav-tv-series.svg" :isActive="isActive" />
 				</router-link>
 			</li>
 			<li>
-				<router-link :to="{ name: 'bookmarked-movies' }" aria-label="Bookmarks">
-					<MenuIcon src="icon-nav-bookmark.svg" />
+				<router-link
+					:to="{ name: 'bookmarked-movies' }"
+					v-slot="{ isActive }"
+					aria-label="Bookmarks"
+				>
+					<MenuIcon src="icon-nav-bookmark.svg" :isActive="isActive" />
 				</router-link>
 			</li>
 		</ul>

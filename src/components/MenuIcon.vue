@@ -1,10 +1,13 @@
 <template>
-	<img :src="`/images/${props.src}`" :alt="alt" />
+	<img
+		class="menu-icon"
+		:src="`/images/${props.src}`"
+		:alt="alt"
+		:class="{ 'menu-icon--active': isActive }"
+	/>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-
 const props = defineProps({
 	src: {
 		type: String,
@@ -14,14 +17,19 @@ const props = defineProps({
 		type: String,
 		default: "",
 	},
+	isActive: {
+		type: Boolean,
+		default: false,
+	},
 });
 </script>
 
 <style scoped lang="scss">
-img {
+.menu-icon {
 	transition: filter 0.2s ease-in-out;
 	cursor: pointer;
-	&:hover {
+	&:hover,
+	&--active {
 		filter: brightness(0) invert(1);
 	}
 }

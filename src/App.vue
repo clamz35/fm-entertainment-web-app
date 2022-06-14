@@ -2,7 +2,9 @@
 	<div class="app">
 		<header><HeaderLayout /></header>
 		<main class="app__main">
-			<RouterView />
+			<RouterView v-slot="{ Component }">
+				<Component :is="Component" />
+			</RouterView>
 		</main>
 	</div>
 </template>
@@ -12,6 +14,8 @@ import { RouterView } from "vue-router";
 
 import HeaderLayout from "@/layout/HeaderLayout.vue";
 import { useMediaStore } from "./stores/media.store";
+import { ref } from "vue";
+const show = ref(false);
 
 useMediaStore().loadMovies();
 </script>
@@ -19,6 +23,25 @@ useMediaStore().loadMovies();
 <style lang="scss">
 @use "@/assets/styles.scss";
 
+.v-enter-active,
+.v-leave-active {
+	transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+	opacity: 0;
+}
+
+.fade-leave-to,
+.fade-enter-from {
+	opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: all 1s ease;
+}
 .app {
 	display: grid;
 	grid-template-columns: 12.8rem 1fr;
